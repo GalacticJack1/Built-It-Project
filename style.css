@@ -18,7 +18,11 @@ body {
     background-position: center;
     background-size: cover;
     min-height: 100vh;   
-    
+}
+
+body.library {
+      backdrop-filter: blur(80px);
+      opacity: 95%;
 }
 
 
@@ -66,6 +70,47 @@ transition: background-color 0.3s ease;
     transition: 200ms ease;   
 }
 
+select {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #d78d41;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 16px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.fade-in-up {
+animation: fadeInUp 2000ms ease;
+}
+
+.fade-in {
+animation: fadeIn 3000ms ease;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+   100% {
+        opacity: 1;        
+    }
+}
+
 /* NAVIGATION */
 
 .nav__container {
@@ -75,7 +120,7 @@ transition: background-color 0.3s ease;
     padding: 10px;
     gap: 15px;
     padding-left: 160px;
-    padding-right: 120px;
+    padding-right: 100px;
 
 }
 
@@ -154,11 +199,15 @@ transition: background-color 0.3s ease;
   border: 2px solid #ccc;        
   border-radius: 24px;            
   padding: 4px 8px;               
-  max-width: 400px;               
+  max-width: 500px;               
   background-color: #fff;
   margin:  0 auto;
   margin-bottom: 50px;
-  
+  }
+
+.library__nav {
+    max-width: 400px;
+
 }
 
   .search__bar--area {
@@ -189,9 +238,33 @@ transition: background-color 0.3s ease;
         transform: scale(.95);
     }
 
+     .container__library {
+        position: relative;
+        margin-bottom: 50;
+        padding-right: 100px;
+        transform: translateY(-40px);
+        align-items: center;
+        max-width: 
+    }
+
     .fa-wand-magic-sparkles {
         height: 32px;
         width: 40px;
+    }
+
+    /* Search Results */
+
+    .spells__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 300px;
+        padding-right: 300px;
+        font-size: 32px;
+    }
+
+    #search__results {
+        transform: translateY(-36px);
     }
 
     
