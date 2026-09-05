@@ -1,0 +1,197 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    max-height: 100%;
+    background-image: url(./assets/library2.png), url(./assets/Library.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;   
+    
+}
+
+
+nav {  
+    font-family: 'MedievalSharp', sans-serif; 
+    margin-bottom: -80px;
+}
+
+img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+p, h1, h2 ,h3, h4 {
+    font-family: 'roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+.gold {
+    color: #d78d41;
+    font-weight: 800px;
+}
+
+.medieval {
+    font-family: 'MedievalSharp', sans-serif;
+}
+
+.highlight {
+font-weight: bolder;
+transition: background-color 0.3s ease;
+}
+
+.highlight:hover {
+    background-color: #d78d41;
+    color: #eed28c;
+    transition: 200ms ease;   
+}
+
+/* NAVIGATION */
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    padding: 10px;
+    gap: 15px;
+    padding-left: 160px;
+    padding-right: 120px;
+
+}
+
+.nav__links {
+    display: flex;
+    gap: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 20px;
+    align-items: center;
+    margin-bottom: 32px;
+    
+    }
+
+.nav__link--primary {
+    background-color: #d78d41;
+    border-radius: 50px;
+    padding: 12px 40px 12px 40px;
+    color: white;
+    font-weight: bold;
+    border: 4px solid #d78d41;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    box-shadow: black  3px 3px 6px;
+}
+
+.nav__link--primary:hover {
+    background-color: #eed28c;
+    border: 4px solid #eed28c;
+    transition: 200ms ease;
+}
+
+.nav__link--primary:active {
+    transform: scale(.95);
+    display: inline-block;
+    transform-origin: center center;
+    transition: 100ms ease;
+   }
+
+    .famlogo {
+    width: 160px;
+    height: 160px;
+    padding-left: 20px;
+    position: relative;
+    }
+
+    /* SEARCH ENGINE */
+
+  .search__engine--container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: -20px;
+  }
+
+  search__description--title {
+    font-weight: 800;
+  }
+  
+  .search__description--title2 {
+    line-height: 3.0;
+    font-size:medium
+  }
+
+  .Famulus__mascot {
+    height: 400px;
+    padding: px 30px 30px 30px;
+    margin-top: 20px;
+  }
+
+.search__bar {
+  display: flex;                 
+  align-items: center;            
+  border: 2px solid #ccc;        
+  border-radius: 24px;            
+  padding: 4px 8px;               
+  max-width: 400px;               
+  background-color: #fff;
+  margin:  0 auto;
+  margin-bottom: 50px;
+  
+}
+
+  .search__bar--area {
+  flex-grow: 1;                  
+  border: none;                  
+  outline: none;                  
+  background: transparent;        
+  padding: 8px;
+  font-size: 16px;
+  }
+
+  .search__bar--button {
+   background: #d78d41;            
+  color: white;
+  border: none;                   
+  border-radius: 20px;            
+  padding: 8px 30px;
+  cursor: pointer;
+  box-shadow: black  3px 3px 6px;
+    }
+
+    .search__bar--button:hover {
+     background-color: #eed28c;
+    transition: 200ms ease;
+    }
+
+    .search__bar--button:active {
+        transform: scale(.95);
+    }
+
+    .fa-wand-magic-sparkles {
+        height: 32px;
+        width: 40px;
+    }
+
+    
