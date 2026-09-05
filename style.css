@@ -267,4 +267,19 @@ animation: fadeIn 3000ms ease;
         transform: translateY(-36px);
     }
 
-    
+    #spell-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.spell-card {
+  padding: 20px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.spell-card h2 {
+  margin: 0;
+}

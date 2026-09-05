@@ -1,14 +1,48 @@
-const BASE_URL = "https://www.dnd5eapi.co";
+// * "https://www.dnd5eapi.co" * /
 
-export async function getAllSpells() {
-  const spellIndexes = await fetch(BASE_URL + "/api/2014/spells").then((response) =>
-    response.json()
-  );
-  return Promise.all(
-    spellIndexes.results.map((index) =>
-      fetch(BASE_URL + index.url).then((response) => response.json())
-    )
-  );
-}
 
-console.log getAllSpells
+    async function getSpells() {
+
+        const response = await fetch(
+            "https://www.dnd5eapi.co/api/2014/spells"
+        );
+
+        const data = await response.json();
+
+        const spellList = document.getElementById("spell-list");
+
+        data.results.forEach((spell) => {
+
+            const spellElement = document.createElement("p");
+
+            spellElement.textContent =
+                `${spell.name} - Level ${spell.level}`;
+
+            spellList.appendChild(spellElement);
+
+        });
+    }
+
+    getSpells();
+
+    const spellList = document.getElementById("spell-list");
+
+data.results.forEach((spell) => {
+
+    const spellElement = document.createElement("p");
+
+    spellElement.textContent = spell.name;
+
+    spellElement.addEventListener("click", async () => {
+
+        const response = await fetch(
+            `https://www.dnd5eapi.co${spell.url}`
+        );
+
+        const spellData = await response.json();
+
+        console.log(spellData);
+    });
+
+    spellList.appendChild(spellElement);
+});
