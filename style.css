@@ -31,6 +31,10 @@ nav {
     margin-bottom: -80px;
 }
 
+button {
+    cursor: pointer;
+}
+
 img {
         max-width: 100%;
         height: auto;
@@ -39,6 +43,7 @@ img {
 
 p, h1, h2 ,h3, h4 {
     font-family: 'roboto', sans-serif;
+    
 }
 
 a {
@@ -283,3 +288,180 @@ animation: fadeIn 3000ms ease;
 .spell-card h2 {
   margin: 0;
 }
+
+.spell__library {
+    padding: 40px 40px 40px 60px;
+}
+ 
+
+.spell-button {
+    width: 220px;
+    height: 160px;
+    background-size: 122% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 40px;
+    padding-left: 50px;
+    padding-right: 40px;
+    color: #fff0b4;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+    font-family: 'MedievalSharp', sans-serif;
+    text-shadow: 
+        -2px -2px 0 black,
+         0px -2px 0 black,
+         2px -2px 0 black,
+        -2px  0px 0 black,
+         2px  0px 0 black,
+        -2px  2px 0 black,
+         0px  2px 0 black,
+         2px  2px 0 black;
+}
+
+.wizard-book {
+    background-image: url("./assets/bluebook.png");
+}
+
+.sorcerer-book {
+    background-image: url("./assets/redbook.png");
+}
+
+.warlock-book {
+    background-image: url("./assets/blackbook.png");
+}
+
+.cleric-book {
+    background-image: url("./assets/whitebook.png");
+}
+
+.druid-book {
+    background-image: url("./assets/greenbook.png");
+}
+
+.bard-book {
+    background-image: url("./assets/purplebook.png");
+}
+
+.paladin-book {
+    background-image: url("./assets/yellowbook.png");
+}
+
+.ranger-book {
+    background-image: url("./assets/lightgreenbook.png");
+}
+
+
+.pop-up-book {      
+    width: 700px;
+    height: 500px;
+    background-image: url("./assets/openbook.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+   padding: 90px 120px;
+    box-sizing: border-box;
+    border: none;
+    overflow: hidden;
+}
+
+.pop-up-book::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.close-book {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    cursor: pointer;   
+}
+
+/* LIBRARY LOADING */
+
+.spells__loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#spell-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 500px;
+    background-image: url(./assets/openbook.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 90px 120px;
+    box-sizing: border-box;
+    z-index: 1000;
+    overflow-y: auto; 
+    
+}
+
+#spell-details h2 {
+    text-align: left;
+    margin-top: 0;
+    font-family: 'MedievalSharp', sans-serif;
+    color: #fff;
+    text-shadow: 
+        -2px -2px 0 black,
+         0px -2px 0 black,
+         2px -2px 0 black,
+        -2px  0px 0 black,
+         2px  0px 0 black,
+        -2px  2px 0 black,
+         0px  2px 0 black,
+         2px  2px 0 black;
+}
+
+#spell-details p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+    font-weight: bolder;
+     text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;       
+    
+
+}
+
+    
+      
+
+.spells__loading--fire {
+    display: block;
+    animation: rotate 500ms infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotatoe(0);
+    }
+   100% {
+        transform: rotate(-360deg);       
+    }
+}
+
+@media
+

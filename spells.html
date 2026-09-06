@@ -6,7 +6,7 @@
     <title>Famulus | Library</title>
         <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/afa729a7ce.js" crossorigin="anonymous"></script>
-    <script src="spells.js"></script>
+    <script src="spells.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=MedievalSharp&display=swap" rel="stylesheet">
@@ -27,28 +27,42 @@
         </nav>   
         <div class="search__engine--container container__library">
       <div class="search__bar library__nav">
-        <input type="text" class="search__bar--area" placeholder="What do you seek?">
-        <button class="search__bar--button">
+        <input type="text" id="spell-search" class="search__bar--area" placeholder="What knowledge do you seek?">
+        <button id="spell-search-button" class="search__bar--button">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
         </button>
     </div>
     </div>
     <section id="search__results">
         <div class="spells__header">
-            <h3>All <span class="gold medieval">Spells</span></h3>
-            <select id="filter">
-                <option value disabled selected>Sort</option>
-                <option> By Spell level </option>
-                <option> By School of Magic</option>
-                <option> By Class</option>
-                <option> A to Z</option>
-                <option> Z to A</option>
+            <h3><span class="gold medieval">Spells</span></h3>
+            <select id="filter" onchange="filterSpells(event)">
+                <option value disabled selected>Sort</option>           
+                <option value="A_TO_Z"> A to Z</option>
+                <option value="Z_TO_A"> Z to A</option>
+                <option value="LEVEL"> By Spell level </option>               
+                <option value="CLASSWIZARD"> By Class:Wizard</option>
+                <option value="CLASSSORCEROR"> By Class:Sorceror</option>
+                <option value="CLASSWARLOCK"> By Class:Warlock</option>
+                <option value="CLASSCLERIC"> By Class:Cleric</option>
+                <option value="CLASSDRUID"> By Class:Druid</option>
+                <option value="CLASSBARD"> By Class:Bard</option>
+                <option value="CLASSPALADIN">By Class: Paladin</option>
+                <option value="CLASSRANGER">By Class: Ranger</option>
             </select>
             </div>
+            <div class="spells__loading">
+                <img class="spells__loading--fire" src="./assets/loadingfire.gif" alt="">
+            </div>
             <div class="spell__library">
-                <div id="spell-list"></div>
-                <div id="spell-details"></div>
+                <div id="spell-list"></div>              
            </div>
     </section>
     </body>
+    <dialog id="spell-details" class="pop-up-book">
+                    <button class="close-book">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <div id="spell-details-content"></div>
+    </dialog>
 </html>
