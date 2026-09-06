@@ -6,7 +6,7 @@
     <title>Welcome to Famulus!</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/afa729a7ce.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="spells.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=MedievalSharp&display=swap" rel="stylesheet">
@@ -20,13 +20,13 @@
             <div class="nav__container">
                 <img class="famlogo" src="./assets/famus-logo.png" alt="Famulus Logo">
                 <ul class=nav__links>
-                    <li><a href="#about" class="nav__link highlight">Home</a></li>
+                    <li><a href="index.html" class="nav__link highlight">Home</a></li>
                     <li><a href="#features" class="nav__link highlight">About</a></li>
                    <li><a href="#contact" class="nav__link nav__link--primary">Contact</a></li>
                    </ul>
             </div>
         </nav>
-        <div class="search__engine--container">
+        <div class="search__engine--container container__library">
         <div class="search__description">
             <h1 class="search__description--title fade-in-up">
                 <b>Welcome to <span class="gold medieval highlight"><b>Famulus</b></span>!<br>Your magical library for all things <span class="gold"><b>DND 5E!</span></h1>
@@ -34,11 +34,14 @@
             <h2 class="search__description--title2 fade-in-up">
                 What can our reliable goblin assistant find for you?
       </h2>
-      <div class="search__bar fade-in-up ">
-        <input type="text" class="search__bar--area" placeholder="What knowledge do you seek?">
+      <div class="search__bar fade-in-up library__nav ">
+        <input type="text" class="search__bar--area" placeholder="Lets get started!">
+       <form action="spells.html">
         <button class="search__bar--button">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
         </button>
+    </form>
+        </div>
         </div>
         <img class="Famulus__mascot fade-in" src="./assets/Famemmy.png">
         </div>

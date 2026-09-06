@@ -193,8 +193,8 @@ animation: fadeIn 3000ms ease;
   }
 
   .Famulus__mascot {
-    padding: 0px 30px 30px 30px;
-    margin-top: 20px;
+    display: block;
+    margin: 20px auto 0 auto;
     width: min(400px, 80vw);
     height: auto;
   }
@@ -272,6 +272,34 @@ animation: fadeIn 3000ms ease;
     #search__results {
         transform: translateY(-36px);
     }
+
+    .no-results {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+ .no-results__image {
+    width: 250px;
+    max-width: 70vw;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.no-results h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.no-results p {
+    font-size: 18px;
+}
+
+
+
+
+
+
 
     #spell-list {
   display: flex;

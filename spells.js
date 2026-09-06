@@ -42,6 +42,8 @@ async function getSpells() {
 
 
 
+
+
 async function displaySpells(spellArray) {
 
     const spellList =
@@ -56,6 +58,35 @@ async function displaySpells(spellArray) {
 
     const currentVersion =
         displayVersion;
+
+
+    // SHOW OOPS MESSAGE IF THERE ARE NO RESULTS
+
+    if (spellArray.length === 0) {
+
+        spellList.innerHTML = `
+            <div class="no-results">
+
+                <img
+                    src="./assets/oops.png"
+                    alt="No spells found"
+                    class="no-results__image"
+                >
+
+                <h2>
+                    Oops! Emmy couldn't find anything...
+                </h2>
+
+                <p>
+                    Try searching for something else?
+                </p>
+
+            </div>
+        `;
+
+        return;
+    }
+
 
 
     for (const spell of spellArray) {
@@ -175,6 +206,8 @@ async function displaySpells(spellArray) {
 
 
 
+
+
 function setBookColor(
     spellElement,
     spellData
@@ -256,6 +289,8 @@ function setBookColor(
     }
 
 }
+
+
 
 
 
@@ -424,6 +459,8 @@ async function filterSpells(event) {
 
 
 
+
+
 async function getClassSpells(
     className
 ) {
@@ -458,6 +495,8 @@ async function getClassSpells(
 
 
 
+
+
 const searchInput =
     document.querySelector(
         ".search__bar--area"
@@ -468,6 +507,8 @@ const searchButton =
     document.querySelector(
         ".search__bar--button"
     );
+
+
 
 
 
@@ -501,10 +542,14 @@ async function searchSpells() {
 
 
 
+
+
 searchButton.addEventListener(
     "click",
     searchSpells
 );
+
+
 
 
 
@@ -523,6 +568,8 @@ searchInput.addEventListener(
 
 
 
+
+
 const closeBook =
     document.querySelector(
         ".close-book"
@@ -533,6 +580,8 @@ const spellDetails =
     document.getElementById(
         "spell-details"
     );
+
+
 
 
 
@@ -547,6 +596,8 @@ closeBook.addEventListener(
 
 
 
+
+
 function openMenu() {
 
     document.body.classList.add(
@@ -557,6 +608,8 @@ function openMenu() {
 
 
 
+
+
 function closeMenu() {
 
     document.body.classList.remove(
@@ -564,6 +617,8 @@ function closeMenu() {
     );
 
 }
+
+
 
 
 
